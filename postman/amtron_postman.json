@@ -1,0 +1,516 @@
+{
+	"info": {
+		"_postman_id": "c18fec4d-bef0-40f3-a863-3fb33dfb576e",
+		"name": "Amtron",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "DevInfo",
+			"item": [
+				{
+					"name": "Device Information",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{AMTRON_IP}}:25000/MHCP/1.0/DevInfo?DevKey={{PIN1}}",
+							"protocol": "http",
+							"host": [
+								"{{AMTRON_IP}}"
+							],
+							"port": "25000",
+							"path": [
+								"MHCP",
+								"1.0",
+								"DevInfo"
+							],
+							"query": [
+								{
+									"key": "DevKey",
+									"value": "{{PIN1}}",
+									"description": "PIN1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ChargeData",
+			"item": [
+				{
+					"name": "Charge Data",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{AMTRON_IP}}:25000/MHCP/1.0/ChargeData?DevKey={{PIN1}}",
+							"protocol": "http",
+							"host": [
+								"{{AMTRON_IP}}"
+							],
+							"port": "25000",
+							"path": [
+								"MHCP",
+								"1.0",
+								"ChargeData"
+							],
+							"query": [
+								{
+									"key": "DevKey",
+									"value": "{{PIN1}}",
+									"description": "PIN1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Statistics",
+			"item": [
+				{
+					"name": "Statistic Day",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{AMTRON_IP}}:25000/MHCP/1.0/Statistics/Day?DevKey={{PIN1}}",
+							"protocol": "http",
+							"host": [
+								"{{AMTRON_IP}}"
+							],
+							"port": "25000",
+							"path": [
+								"MHCP",
+								"1.0",
+								"Statistics",
+								"Day"
+							],
+							"query": [
+								{
+									"key": "DevKey",
+									"value": "{{PIN1}}",
+									"description": "PIN1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Statistic Week",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{AMTRON_IP}}:25000/MHCP/1.0/Statistics/Week?DevKey={{PIN1}}",
+							"protocol": "http",
+							"host": [
+								"{{AMTRON_IP}}"
+							],
+							"port": "25000",
+							"path": [
+								"MHCP",
+								"1.0",
+								"Statistics",
+								"Week"
+							],
+							"query": [
+								{
+									"key": "DevKey",
+									"value": "{{PIN1}}",
+									"description": "PIN1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Statistic Month",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{AMTRON_IP}}:25000/MHCP/1.0/Statistics/Month?DevKey={{PIN1}}",
+							"protocol": "http",
+							"host": [
+								"{{AMTRON_IP}}"
+							],
+							"port": "25000",
+							"path": [
+								"MHCP",
+								"1.0",
+								"Statistics",
+								"Month"
+							],
+							"query": [
+								{
+									"key": "DevKey",
+									"value": "{{PIN1}}",
+									"description": "PIN1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Statistic 1/2 Year",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{AMTRON_IP}}:25000/MHCP/1.0/Statistics/Hyear?DevKey={{PIN1}}",
+							"protocol": "http",
+							"host": [
+								"{{AMTRON_IP}}"
+							],
+							"port": "25000",
+							"path": [
+								"MHCP",
+								"1.0",
+								"Statistics",
+								"Hyear"
+							],
+							"query": [
+								{
+									"key": "DevKey",
+									"value": "{{PIN1}}",
+									"description": "PIN1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Statistic Year",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{AMTRON_IP}}:25000/MHCP/1.0/Statistics/Year?DevKey={{PIN1}}",
+							"protocol": "http",
+							"host": [
+								"{{AMTRON_IP}}"
+							],
+							"port": "25000",
+							"path": [
+								"MHCP",
+								"1.0",
+								"Statistics",
+								"Year"
+							],
+							"query": [
+								{
+									"key": "DevKey",
+									"value": "{{PIN1}}",
+									"description": "PIN1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Statistic Annual",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{AMTRON_IP}}:25000/MHCP/1.0/Statistics/Year?DevKey={{PIN1}}",
+							"protocol": "http",
+							"host": [
+								"{{AMTRON_IP}}"
+							],
+							"port": "25000",
+							"path": [
+								"MHCP",
+								"1.0",
+								"Statistics",
+								"Year"
+							],
+							"query": [
+								{
+									"key": "DevKey",
+									"value": "{{PIN1}}",
+									"description": "PIN1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Whitelist",
+			"item": [
+				{
+					"name": "GET RFID tags",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{AMTRON_IP}}:25000/MHCP/1.0/Whitelist?DevKey={{PIN1}}&Pin={{PIN2}}&State=Open",
+							"protocol": "http",
+							"host": [
+								"{{AMTRON_IP}}"
+							],
+							"port": "25000",
+							"path": [
+								"MHCP",
+								"1.0",
+								"Whitelist"
+							],
+							"query": [
+								{
+									"key": "DevKey",
+									"value": "{{PIN1}}",
+									"description": "PIN1"
+								},
+								{
+									"key": "Pin",
+									"value": "{{PIN2}}",
+									"description": "PIN2"
+								},
+								{
+									"key": "State",
+									"value": "Open",
+									"description": "Read,Open,Alive,Close -> open first"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST RFID tag",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Name\": \"Test\",\n    \"Uid\": \"00000000000000\",\n    \"Master\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{AMTRON_IP}}:25000/MHCP/1.0/Whitelist?DevKey={{PIN1}}&Pin={{PIN2}}",
+							"protocol": "http",
+							"host": [
+								"{{AMTRON_IP}}"
+							],
+							"port": "25000",
+							"path": [
+								"MHCP",
+								"1.0",
+								"Whitelist"
+							],
+							"query": [
+								{
+									"key": "DevKey",
+									"value": "{{PIN1}}",
+									"description": "PIN1"
+								},
+								{
+									"key": "Pin",
+									"value": "{{PIN2}}",
+									"description": "PIN2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE RFID tag",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{           \"Name\": \"\",\n            \"Uid\": \"000000000\",\n            \"Master\": true\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{AMTRON_IP}}:25000/MHCP/1.0/Whitelist?DevKey={{PIN1}}&Pin={{PIN2}}&Uid=",
+							"protocol": "http",
+							"host": [
+								"{{AMTRON_IP}}"
+							],
+							"port": "25000",
+							"path": [
+								"MHCP",
+								"1.0",
+								"Whitelist"
+							],
+							"query": [
+								{
+									"key": "DevKey",
+									"value": "{{PIN1}}",
+									"description": "PIN1"
+								},
+								{
+									"key": "Pin",
+									"value": "{{PIN2}}",
+									"description": "PIN2"
+								},
+								{
+									"key": "Uid",
+									"value": "",
+									"description": "rfid uid"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ChargeRecords",
+			"item": [
+				{
+					"name": "GET charge records",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{AMTRON_IP}}:25000/MHCP/1.0/ChargeRecords?DevKey={{PIN1}}&Start=1608394502&End=1639930502&State=Read",
+							"protocol": "http",
+							"host": [
+								"{{AMTRON_IP}}"
+							],
+							"port": "25000",
+							"path": [
+								"MHCP",
+								"1.0",
+								"ChargeRecords"
+							],
+							"query": [
+								{
+									"key": "DevKey",
+									"value": "{{PIN1}}",
+									"description": "PIN1"
+								},
+								{
+									"key": "Start",
+									"value": "1608394502",
+									"description": "Starttime in Unixtime"
+								},
+								{
+									"key": "End",
+									"value": "1639930502",
+									"description": "Endtime in Unixtime"
+								},
+								{
+									"key": "State",
+									"value": "Read",
+									"description": "Read,Open,Alive,Close -> open first"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
