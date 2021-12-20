@@ -1,5 +1,7 @@
 # amtron-influxdb-adapter
-MENNEKES AMTRON® python adapter to write charging data to influxdb for better overview with grafana
+MENNEKES AMTRON® inoffical python adapter to write charging data to influxdb for better monitor&overview with grafana and integrate in smart home.
+Use at your own risk.
+
 
 ![grafana dashboard](img/grafana_dashboard.png)
 
@@ -28,4 +30,6 @@ MENNEKES AMTRON® python adapter to write charging data to influxdb for better o
 - Activate environment
 
 
-thanks to https://github.com/lephisto/amtron
+[Amtron devices](https://www.chargeupyourday.de/ps/amtron/)
+
+[Thanks to lephisto](https://github.com/lephisto/amtron)
