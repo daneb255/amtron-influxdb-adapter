@@ -33,7 +33,7 @@ def write_to_influx_charge_records(device_name: str, rfid_tag: str, start: datet
         return False
 
 
-def write_to_influx_charge_data(device_name: str, act_pwr: float, date_time) -> bool:
+def write_to_influx_charge_data(device_name: str, act_pwr: float) -> bool:
     try:
         client = InfluxDBClient(host=INFLUX_HOST, port=INFLUX_PORT, username=INFLUX_USER, password=INFLUX_PASSWORD)
         client.switch_database(INFLUX_DB)
@@ -44,7 +44,7 @@ def write_to_influx_charge_data(device_name: str, act_pwr: float, date_time) -> 
                 "tags": {
                     "device_id": device_name
                 },
-                "time": date_time,
+                "time": datetime.now(),
                 "fields": {
                     "act_pwr": act_pwr
                 }

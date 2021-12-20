@@ -18,10 +18,10 @@ Use at your own risk.
 - Create crontabs to run docker container on specific times.
   - Charging data from last 6 hours, running every 6 hours
 
-    `0 */6 * * * docker run --rm --env-file path_to_env/.env dbitzer/amtron-influxdb-adapter:1.0 python amtron.py >/dev/null 2>&1`
+    `0 */6 * * * docker run --rm --env-file path_to_env/.env dbitzer/amtron-influxdb-adapter:1.1 python amtron.py >/dev/null 2>&1`
   - Current charging power every minute
 
-    `* * * * * docker run --rm --env-file path_to_env/.env dbitzer/amtron-influxdb-adapter:1.0 python amtron_power.py >/dev/null 2>&1`
+    `* * * * * docker run --rm --env-file path_to_env/.env dbitzer/amtron-influxdb-adapter:1.1 python amtron_power.py >/dev/null 2>&1`
 
 ## Postman collection
 (POST requests missing)
