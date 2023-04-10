@@ -1,12 +1,18 @@
-from influxdb import InfluxDBClient
+import influxdb_client
+
+from influxdb_client.client.write_api import SYNCHRONOUS
 from datetime import datetime
-from core.settings import INFLUX_PASSWORD, INFLUX_USER, INFLUX_HOST, INFLUX_DB, INFLUX_PORT
+from core.settings import INFLUX_TOKEN, INFLUX_BUCKET, INFLUX_HOST, INFLUX_ORG
 
 
 def write_to_influx_charge_records(device_name: str, rfid_tag: str, start: datetime, end: int, duration: int, wh: float, costs: float) -> bool:
     try:
-        client = InfluxDBClient(host=INFLUX_HOST, port=INFLUX_PORT, username=INFLUX_USER, password=INFLUX_PASSWORD)
-        client.switch_database(INFLUX_DB)
+        client = influxdb_client.InfluxDBClient(
+            url=INFLUX_HOST,
+            token=INFLUX_TOKEN,
+            org=INFLUX_ORG
+        )
+
         data = [
             {
                 "measurement": "amtron_charge_records",
@@ -23,8 +29,8 @@ def write_to_influx_charge_records(device_name: str, rfid_tag: str, start: datet
                 }
             }
         ]
-        client.write_points(data)
-        client.close()
+        write_api = client.write_api(write_options=SYNCHRONOUS)
+        write_api.write(bucket=INFLUX_BUCKET, org=INFLUX_ORG, record=data)
         print("Successful write data to influx")
         return True
     except Exception as e:
@@ -35,8 +41,11 @@ def write_to_influx_charge_records(device_name: str, rfid_tag: str, start: datet
 
 def write_to_influx_charge_data(device_name: str, act_pwr: float) -> bool:
     try:
-        client = InfluxDBClient(host=INFLUX_HOST, port=INFLUX_PORT, username=INFLUX_USER, password=INFLUX_PASSWORD)
-        client.switch_database(INFLUX_DB)
+        client = influxdb_client.InfluxDBClient(
+            url=INFLUX_HOST,
+            token=INFLUX_TOKEN,
+            org=INFLUX_ORG
+        )
 
         data = [
             {
@@ -51,8 +60,8 @@ def write_to_influx_charge_data(device_name: str, act_pwr: float) -> bool:
             }
         ]
         print(data)
-        client.write_points(data)
-        client.close()
+        write_api = client.write_api(write_options=SYNCHRONOUS)
+        write_api.write(bucket=INFLUX_BUCKET, org=INFLUX_ORG, record=data)
         print("Successful write data to influx")
         return True
     except Exception as e:
